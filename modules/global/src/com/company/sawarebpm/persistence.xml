@@ -12,5 +12,7 @@
         <class>com.company.sawarebpm.entity.directories.Demand</class>
         <class>com.company.sawarebpm.entity.directories.BusinessStatus</class>
         <class>com.company.sawarebpm.entity.directories.SuitableBankStatus</class>
+        <class>com.company.sawarebpm.entity.questionnaire.CurrendLoan</class>
+        <class>com.company.sawarebpm.entity.questionnaire.ClosedLoans</class>
     </persistence-unit>
 </persistence>
