@@ -4,16 +4,13 @@
     <persistence-unit name="sawareCea"
                       transaction-type="RESOURCE_LOCAL">
         <class>com.company.sawarebpm.entity.Business</class>
-<<<<<<< HEAD
         <class>com.company.sawarebpm.entity.questionnaire.Questionnaire</class>
         <class>com.company.sawarebpm.entity.questionnaire.RequestedCredit</class>
-=======
         <class>com.company.sawarebpm.entity.directories.Bank</class>
         <class>com.company.sawarebpm.entity.directories.Document</class>
         <class>com.company.sawarebpm.entity.directories.Source</class>
         <class>com.company.sawarebpm.entity.directories.Demand</class>
         <class>com.company.sawarebpm.entity.directories.BusinessStatus</class>
         <class>com.company.sawarebpm.entity.directories.SuitableBankStatus</class>
->>>>>>> 14249c7c02fa4f95dc0863d26dca40b4e9c85fdc
     </persistence-unit>
 </persistence>
