@@ -4,5 +4,23 @@
         <entity class="com.company.sawarebpm.entity.Business">
             <include re=".*"/>
         </entity>
+        <entity class="com.company.sawarebpm.entity.directories.Bank">
+            <include re=".*"/>
+        </entity>
+        <entity class="com.company.sawarebpm.entity.directories.Document">
+            <include re=".*"/>
+        </entity>
+        <entity class="com.company.sawarebpm.entity.directories.Source">
+            <include re=".*"/>
+        </entity>
+        <entity class="com.company.sawarebpm.entity.directories.Demand">
+            <include re=".*"/>
+        </entity>
+        <entity class="com.company.sawarebpm.entity.directories.BusinessStatus">
+            <include re=".*"/>
+        </entity>
+        <entity class="com.company.sawarebpm.entity.directories.SuitableBankStatus">
+            <include re=".*"/>
+        </entity>
     </entities>
 </fts-config>
