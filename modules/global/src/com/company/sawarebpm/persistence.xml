@@ -12,12 +12,9 @@
         <class>com.company.sawarebpm.entity.directories.Demand</class>
         <class>com.company.sawarebpm.entity.directories.BusinessStatus</class>
         <class>com.company.sawarebpm.entity.directories.SuitableBankStatus</class>
-<<<<<<< HEAD
         <class>com.company.sawarebpm.entity.directories.Service</class>
         <class>com.company.sawarebpm.entity.directories.ServiceStatus</class>
-=======
         <class>com.company.sawarebpm.entity.questionnaire.CurrendLoan</class>
         <class>com.company.sawarebpm.entity.questionnaire.ClosedLoans</class>
->>>>>>> 692005dec8362c34e2bfa318addfc5fbd538151d
     </persistence-unit>
 </persistence>
