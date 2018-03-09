@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <fts-config>
     <entities>
-        <entity class="com.company.sawarebpm.entity.client.Client">
-            <include re=".*"/>
-        </entity>
-        <entity class="com.company.sawarebpm.entity.client.AdditionalContact">
-            <include re=".*"/>
-        </entity>
-        <entity class="com.company.sawarebpm.entity.questionnaire.Quest_legal">
-            <include re=".*"/>
-        </entity>
-        <entity class="com.company.sawarebpm.entity.questionnaire.Quest_Indiv">
-            <include re=".*"/>
-        </entity>
-        <entity class="com.company.sawarebpm.entity.questionnaire.SourcesOfIncome">
-            <include re=".*"/>
-        </entity>
-        <entity class="com.company.sawarebpm.entity.questionnaire.Quest_phys">
-        <entity class="com.company.sawarebpm.entity.client.Contractor">
+        <entity class="com.company.sawarebpm.entity.questionnaire.LastEnt">
             <include re=".*"/>
         </entity>
     </entities>
