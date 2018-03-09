@@ -23,7 +23,6 @@
         <class>com.company.sawarebpm.entity.questionnaire.SourcesOfIncome</class>
         <class>com.company.sawarebpm.entity.questionnaire.Quest_phys</class>
         <class>com.company.sawarebpm.entity.client.ContractorPhys</class>
-        <class>com.company.sawarebpm.entity.client.Contractor</class>
         <class>com.company.sawarebpm.entity.questionnaire.LastEnt</class>
     </persistence-unit>
 </persistence>
