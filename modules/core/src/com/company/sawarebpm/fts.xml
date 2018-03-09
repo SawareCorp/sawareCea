@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <fts-config>
     <entities>
-        <entity class="com.company.sawarebpm.entity.directories.Service">
+        <entity class="com.company.sawarebpm.entity.client.Client">
             <include re=".*"/>
         </entity>
-<<<<<<< HEAD
-        <entity class="com.company.sawarebpm.entity.directories.ServiceStatus">
-=======
-        <entity class="com.company.sawarebpm.entity.questionnaire.Questionnaire">
-            <include re=".*"/>
-        </entity>
-        <entity class="com.company.sawarebpm.entity.questionnaire.RequestedCredit">
-            <include re=".*"/>
-        </entity>
-        <entity class="com.company.sawarebpm.entity.questionnaire.CurrendLoan">
-            <include re=".*"/>
-        </entity>
-        <entity class="com.company.sawarebpm.entity.questionnaire.ClosedLoans">
->>>>>>> 692005dec8362c34e2bfa318addfc5fbd538151d
+        <entity class="com.company.sawarebpm.entity.client.AdditionalContact">
             <include re=".*"/>
         </entity>
     </entities>

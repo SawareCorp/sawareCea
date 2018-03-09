@@ -16,5 +16,7 @@
         <class>com.company.sawarebpm.entity.directories.ServiceStatus</class>
         <class>com.company.sawarebpm.entity.questionnaire.CurrendLoan</class>
         <class>com.company.sawarebpm.entity.questionnaire.ClosedLoans</class>
+        <class>com.company.sawarebpm.entity.client.Client</class>
+        <class>com.company.sawarebpm.entity.client.AdditionalContact</class>
     </persistence-unit>
 </persistence>
