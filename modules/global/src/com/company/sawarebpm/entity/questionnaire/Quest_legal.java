@@ -9,10 +9,14 @@ import com.haulmont.cuba.core.entity.BaseUuidEntity;
 import com.haulmont.cuba.core.entity.Versioned;
 import com.haulmont.cuba.core.entity.Updatable;
 import com.haulmont.cuba.core.entity.Creatable;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.DiscriminatorValue;
 
+@DiscriminatorValue("Quest_leg")
+@PrimaryKeyJoinColumn(name = "ID", referencedColumnName = "ID")
 @Table(name = "SAWARECEA_QUEST_LEGAL")
 @Entity(name = "sawarecea$Quest_legal")
-public class Quest_legal extends BaseUuidEntity implements Versioned, Updatable, Creatable {
+public class Quest_legal extends Questionnaire {
     private static final long serialVersionUID = -6015291532050628450L;
 
     @Column(name = "NAME_OF_COMPANY", length = 2000)
@@ -53,22 +57,6 @@ public class Quest_legal extends BaseUuidEntity implements Versioned, Updatable,
 
     @Column(name = "LEGAL_ADDRESS", length = 2000)
     protected String legalAddress;
-
-    @Column(name = "UPDATE_TS")
-    protected Date updateTs;
-
-    @Column(name = "UPDATED_BY", length = 50)
-    protected String updatedBy;
-
-    @Column(name = "CREATE_TS")
-    protected Date createTs;
-
-    @Column(name = "CREATED_BY", length = 50)
-    protected String createdBy;
-
-    @Version
-    @Column(name = "VERSION", nullable = false)
-    protected Integer version;
 
     public void setOgrn(String ogrn) {
         this.ogrn = ogrn;
@@ -166,56 +154,6 @@ public class Quest_legal extends BaseUuidEntity implements Versioned, Updatable,
         return legalAddress;
     }
 
-
-    @Override
-    public void setUpdateTs(Date updateTs) {
-        this.updateTs = updateTs;
-    }
-
-    @Override
-    public Date getUpdateTs() {
-        return updateTs;
-    }
-
-    @Override
-    public void setUpdatedBy(String updatedBy) {
-        this.updatedBy = updatedBy;
-    }
-
-    @Override
-    public String getUpdatedBy() {
-        return updatedBy;
-    }
-
-    @Override
-    public void setCreateTs(Date createTs) {
-        this.createTs = createTs;
-    }
-
-    @Override
-    public Date getCreateTs() {
-        return createTs;
-    }
-
-    @Override
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    @Override
-    public String getCreatedBy() {
-        return createdBy;
-    }
-
-    @Override
-    public void setVersion(Integer version) {
-        this.version = version;
-    }
-
-    @Override
-    public Integer getVersion() {
-        return version;
-    }
 
     public void setNameOfCompany(String nameOfCompany) {
         this.nameOfCompany = nameOfCompany;

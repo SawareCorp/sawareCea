@@ -10,5 +10,14 @@
         <entity class="com.company.sawarebpm.entity.questionnaire.Quest_legal">
             <include re=".*"/>
         </entity>
+        <entity class="com.company.sawarebpm.entity.questionnaire.Quest_Indiv">
+            <include re=".*"/>
+        </entity>
+        <entity class="com.company.sawarebpm.entity.questionnaire.SourcesOfIncome">
+            <include re=".*"/>
+        </entity>
+        <entity class="com.company.sawarebpm.entity.questionnaire.Quest_phys">
+            <include re=".*"/>
+        </entity>
     </entities>
 </fts-config>

@@ -19,5 +19,8 @@
         <class>com.company.sawarebpm.entity.client.Client</class>
         <class>com.company.sawarebpm.entity.client.AdditionalContact</class>
         <class>com.company.sawarebpm.entity.questionnaire.Quest_legal</class>
+        <class>com.company.sawarebpm.entity.questionnaire.Quest_Indiv</class>
+        <class>com.company.sawarebpm.entity.questionnaire.SourcesOfIncome</class>
+        <class>com.company.sawarebpm.entity.questionnaire.Quest_phys</class>
     </persistence-unit>
 </persistence>
