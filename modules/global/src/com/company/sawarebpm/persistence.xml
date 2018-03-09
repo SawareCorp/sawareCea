@@ -14,9 +14,10 @@
         <class>com.company.sawarebpm.entity.directories.SuitableBankStatus</class>
         <class>com.company.sawarebpm.entity.directories.Service</class>
         <class>com.company.sawarebpm.entity.directories.ServiceStatus</class>
-        <class>com.company.sawarebpm.entity.questionnaire.CurrendLoan</class>
+        <class>com.company.sawarebpm.entity.questionnaire.CurrentLoan</class>
         <class>com.company.sawarebpm.entity.questionnaire.ClosedLoans</class>
         <class>com.company.sawarebpm.entity.client.Client</class>
         <class>com.company.sawarebpm.entity.client.AdditionalContact</class>
+        <class>com.company.sawarebpm.entity.questionnaire.Quest_legal</class>
     </persistence-unit>
 </persistence>

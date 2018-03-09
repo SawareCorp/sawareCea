@@ -15,9 +15,9 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-@Table(name = "SAWARECEA_CURREND_LOAN")
-@Entity(name = "sawarecea$CurrendLoan")
-public class CurrendLoan extends BaseUuidEntity implements Versioned, Updatable, Creatable {
+@Table(name = "SAWARECEA_CURRENT_LOAN")
+@Entity(name = "sawarecea$CurrentLoan")
+public class CurrentLoan extends BaseUuidEntity implements Versioned, Updatable, Creatable {
     private static final long serialVersionUID = -2375762078230314512L;
 
     @Column(name = "UPDATE_TS")
