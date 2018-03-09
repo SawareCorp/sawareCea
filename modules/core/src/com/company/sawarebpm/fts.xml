@@ -4,10 +4,29 @@
         <entity class="com.company.sawarebpm.entity.Business">
             <include re=".*"/>
         </entity>
+<<<<<<< HEAD
         <entity class="com.company.sawarebpm.entity.questionnaire.Questionnaire">
             <include re=".*"/>
         </entity>
         <entity class="com.company.sawarebpm.entity.questionnaire.RequestedCredit">
+=======
+        <entity class="com.company.sawarebpm.entity.directories.Bank">
+            <include re=".*"/>
+        </entity>
+        <entity class="com.company.sawarebpm.entity.directories.Document">
+            <include re=".*"/>
+        </entity>
+        <entity class="com.company.sawarebpm.entity.directories.Source">
+            <include re=".*"/>
+        </entity>
+        <entity class="com.company.sawarebpm.entity.directories.Demand">
+            <include re=".*"/>
+        </entity>
+        <entity class="com.company.sawarebpm.entity.directories.BusinessStatus">
+            <include re=".*"/>
+        </entity>
+        <entity class="com.company.sawarebpm.entity.directories.SuitableBankStatus">
+>>>>>>> 14249c7c02fa4f95dc0863d26dca40b4e9c85fdc
             <include re=".*"/>
         </entity>
     </entities>
