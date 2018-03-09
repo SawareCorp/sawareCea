@@ -31,6 +31,14 @@ public class Questionnaire extends BaseUuidEntity implements Versioned, Updatabl
 
     @Composition
     @OneToMany(mappedBy = "questionnaire")
+    protected List<ClosedLoans> closedLoans;
+
+    @Composition
+    @OneToMany(mappedBy = "questionnaire")
+    protected List<CurrendLoan> currentLoan;
+
+    @Composition
+    @OneToMany(mappedBy = "questionnaire")
     protected List<RequestedCredit> requsestedCredit;
 
     @Column(name = "PROPERTY", length = 2000)
@@ -57,6 +65,24 @@ public class Questionnaire extends BaseUuidEntity implements Versioned, Updatabl
     @Version
     @Column(name = "VERSION", nullable = false)
     protected Integer version;
+
+    public void setClosedLoans(List<ClosedLoans> closedLoans) {
+        this.closedLoans = closedLoans;
+    }
+
+    public List<ClosedLoans> getClosedLoans() {
+        return closedLoans;
+    }
+
+
+    public void setCurrentLoan(List<CurrendLoan> currentLoan) {
+        this.currentLoan = currentLoan;
+    }
+
+    public List<CurrendLoan> getCurrentLoan() {
+        return currentLoan;
+    }
+
 
     public void setRequsestedCredit(List<RequestedCredit> requsestedCredit) {
         this.requsestedCredit = requsestedCredit;
