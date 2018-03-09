@@ -4,5 +4,11 @@
         <entity class="com.company.sawarebpm.entity.Business">
             <include re=".*"/>
         </entity>
+        <entity class="com.company.sawarebpm.entity.questionnaire.Questionnaire">
+            <include re=".*"/>
+        </entity>
+        <entity class="com.company.sawarebpm.entity.questionnaire.RequestedCredit">
+            <include re=".*"/>
+        </entity>
     </entities>
 </fts-config>
