@@ -19,7 +19,7 @@ import com.haulmont.chile.core.annotations.NamePattern;
 import java.util.List;
 import javax.persistence.OneToMany;
 
-@NamePattern("%s|fio")
+@NamePattern("%s|name")
 @DiscriminatorColumn(name = "DTYPE", discriminatorType = DiscriminatorType.STRING)
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorValue("client")
@@ -45,8 +45,8 @@ public class Client extends BaseUuidEntity implements Versioned, Updatable, Crea
     protected Integer version;
 
     @NotNull
-    @Column(name = "FIO", nullable = false)
-    protected String fio;
+    @Column(name = "NAME", nullable = false)
+    protected String name;
 
     @NotNull
     @Column(name = "PHONE_NUMBER", nullable = false, length = 30)
@@ -55,8 +55,42 @@ public class Client extends BaseUuidEntity implements Versioned, Updatable, Crea
     @Column(name = "E_MAIL")
     protected String eMail;
 
+    @NotNull
+    @Column(name = "FACE", nullable = false)
+    protected Integer face = ClientType.Individual.getId();
+
+    @Column(name = "COMMENT_", length = 1000)
+    protected String comment;
+
     @OneToMany(mappedBy = "client")
     protected List<AdditionalContact> additionalContact;
+
+    public void setFace(ClientType face) {
+        this.face = face == null ? null : face.getId();
+    }
+
+    public ClientType getFace() {
+        return face == null ? null : ClientType.fromId(face);
+    }
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
 
     public void setAdditionalContact(List<AdditionalContact> additionalContact) {
         this.additionalContact = additionalContact;
@@ -115,14 +149,6 @@ public class Client extends BaseUuidEntity implements Versioned, Updatable, Crea
     @Override
     public Integer getVersion() {
         return version;
-    }
-
-    public void setFio(String fio) {
-        this.fio = fio;
-    }
-
-    public String getFio() {
-        return fio;
     }
 
     public void setPhoneNumber(String phoneNumber) {
