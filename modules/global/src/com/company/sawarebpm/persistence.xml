@@ -25,5 +25,6 @@
         <class>com.company.sawarebpm.entity.client.ContractorPhys</class>
         <class>com.company.sawarebpm.entity.questionnaire.LastEnt</class>
         <class>com.company.sawarebpm.entity.ticket.Ticket</class>
+        <class>com.company.sawarebpm.entity.underwriting.Underwriting</class>
     </persistence-unit>
 </persistence>

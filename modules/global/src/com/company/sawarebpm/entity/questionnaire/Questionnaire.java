@@ -29,6 +29,9 @@ public class Questionnaire extends BaseUuidEntity implements Versioned, Updatabl
     @Column(name = "UPDATE_TS")
     protected Date updateTs;
 
+    @Column(name = "NAME")
+    protected String name;
+
     @Composition
     @OneToMany(mappedBy = "questionnaire")
     protected List<ClosedLoans> closedLoans;
@@ -65,6 +68,15 @@ public class Questionnaire extends BaseUuidEntity implements Versioned, Updatabl
     @Version
     @Column(name = "VERSION", nullable = false)
     protected Integer version;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
 
     public List<CurrentLoan> getCurrentLoan() {
         return currentLoan;
