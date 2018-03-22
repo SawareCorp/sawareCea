@@ -4,5 +4,8 @@
         <entity class="com.company.sawarebpm.entity.questionnaire.LastEnt">
             <include re=".*"/>
         </entity>
+        <entity class="com.company.sawarebpm.entity.underwriting.Underwriting">
+            <include re=".*"/>
+        </entity>
     </entities>
 </fts-config>
