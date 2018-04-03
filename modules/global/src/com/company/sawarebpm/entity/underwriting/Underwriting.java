@@ -19,6 +19,24 @@ public class Underwriting extends BaseUuidEntity implements Versioned, Updatable
     @Column(name = "UPDATE_TS")
     protected Date updateTs;
 
+    @Column(name = "CLIENT_CHECK", length = 2000)
+    protected String clientCheck;
+
+    @Column(name = "COMPANY_CHECK", length = 2000)
+    protected String companyCheck;
+
+    @Column(name = "CHECK_FSSP", length = 2000)
+    protected String checkFssp;
+
+    @Column(name = "VESSEL_INSPECTION", length = 2000)
+    protected String vesselInspection;
+
+    @Column(name = "CHEK_SOCIAL_NETWORKS", length = 2000)
+    protected String chekSocialNetworks;
+
+    @Column(name = "AFFILIATED", length = 2000)
+    protected String affiliated;
+
     @Column(name = "UPDATED_BY", length = 50)
     protected String updatedBy;
 
@@ -40,6 +58,55 @@ public class Underwriting extends BaseUuidEntity implements Versioned, Updatable
 
     @Column(name = "CHECKING_SO_BORROWER", length = 2000)
     protected String checkingSoBorrower;
+
+    public void setClientCheck(String clientCheck) {
+        this.clientCheck = clientCheck;
+    }
+
+    public String getClientCheck() {
+        return clientCheck;
+    }
+
+    public void setCompanyCheck(String companyCheck) {
+        this.companyCheck = companyCheck;
+    }
+
+    public String getCompanyCheck() {
+        return companyCheck;
+    }
+
+    public void setCheckFssp(String checkFssp) {
+        this.checkFssp = checkFssp;
+    }
+
+    public String getCheckFssp() {
+        return checkFssp;
+    }
+
+    public void setVesselInspection(String vesselInspection) {
+        this.vesselInspection = vesselInspection;
+    }
+
+    public String getVesselInspection() {
+        return vesselInspection;
+    }
+
+    public void setChekSocialNetworks(String chekSocialNetworks) {
+        this.chekSocialNetworks = chekSocialNetworks;
+    }
+
+    public String getChekSocialNetworks() {
+        return chekSocialNetworks;
+    }
+
+    public void setAffiliated(String affiliated) {
+        this.affiliated = affiliated;
+    }
+
+    public String getAffiliated() {
+        return affiliated;
+    }
+
 
     @Override
     public void setUpdateTs(Date updateTs) {
