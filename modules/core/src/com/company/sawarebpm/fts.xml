@@ -8,6 +8,7 @@
             <include re=".*"/>
         </entity>
         <entity class="com.company.sawarebpm.entity.contract.ServiceLine">
+        <entity class="com.company.sawarebpm.entity.analitics.Analitics">
             <include re=".*"/>
         </entity>
     </entities>

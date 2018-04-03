@@ -29,5 +29,6 @@
         <class>com.company.sawarebpm.entity.contract.Contract</class>
         <class>com.company.sawarebpm.entity.client.Company</class>
         <class>com.company.sawarebpm.entity.contract.ServiceLine</class>
+        <class>com.company.sawarebpm.entity.analitics.Analitics</class>
     </persistence-unit>
 </persistence>
