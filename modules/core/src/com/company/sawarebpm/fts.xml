@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <fts-config>
     <entities>
-        <entity class="com.company.sawarebpm.entity.questionnaire.LastEnt">
+        <entity class="com.company.sawarebpm.entity.contract.Contract">
             <include re=".*"/>
         </entity>
-        <entity class="com.company.sawarebpm.entity.ticket.Ticket">
-        <entity class="com.company.sawarebpm.entity.underwriting.Underwriting">
+        <entity class="com.company.sawarebpm.entity.client.Company">
             <include re=".*"/>
         </entity>
     </entities>
