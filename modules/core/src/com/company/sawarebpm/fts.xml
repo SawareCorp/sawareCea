@@ -7,5 +7,8 @@
         <entity class="com.company.sawarebpm.entity.client.Company">
             <include re=".*"/>
         </entity>
+        <entity class="com.company.sawarebpm.entity.analitics.Analitics">
+            <include re=".*"/>
+        </entity>
     </entities>
 </fts-config>
