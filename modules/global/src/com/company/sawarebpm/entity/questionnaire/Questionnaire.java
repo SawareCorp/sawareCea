@@ -17,6 +17,7 @@ import javax.persistence.DiscriminatorColumn;
 import com.haulmont.chile.core.annotations.Composition;
 import java.util.List;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
 
 @DiscriminatorColumn(name = "DTYPE", discriminatorType = DiscriminatorType.STRING)
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -26,8 +27,9 @@ import javax.persistence.OneToMany;
 public class Questionnaire extends BaseUuidEntity implements Versioned, Updatable, Creatable {
     private static final long serialVersionUID = -6168682323758563351L;
 
-    @Column(name = "UPDATE_TS")
-    protected Date updateTs;
+    @NotNull
+    @Column(name = "NUMBER_", nullable = false, unique = true)
+    protected Long number;
 
     @Column(name = "NAME")
     protected String name;
@@ -56,6 +58,9 @@ public class Questionnaire extends BaseUuidEntity implements Versioned, Updatabl
     @Column(name = "LITIGATIONS", length = 2000)
     protected String litigations;
 
+    @Column(name = "UPDATE_TS")
+    protected Date updateTs;
+
     @Column(name = "UPDATED_BY", length = 50)
     protected String updatedBy;
 
@@ -68,6 +73,15 @@ public class Questionnaire extends BaseUuidEntity implements Versioned, Updatabl
     @Version
     @Column(name = "VERSION", nullable = false)
     protected Integer version;
+
+    public void setNumber(Long number) {
+        this.number = number;
+    }
+
+    public Long getNumber() {
+        return number;
+    }
+
 
     public void setName(String name) {
         this.name = name;

@@ -28,5 +28,6 @@
         <class>com.company.sawarebpm.entity.underwriting.Underwriting</class>
         <class>com.company.sawarebpm.entity.contract.Contract</class>
         <class>com.company.sawarebpm.entity.client.Company</class>
+        <class>com.company.sawarebpm.entity.contract.ServiceLine</class>
     </persistence-unit>
 </persistence>

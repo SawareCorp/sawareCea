@@ -11,12 +11,29 @@ import com.haulmont.cuba.core.entity.Versioned;
 import com.haulmont.cuba.core.entity.Updatable;
 import com.haulmont.cuba.core.entity.Creatable;
 import com.haulmont.chile.core.annotations.NamePattern;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import com.haulmont.chile.core.annotations.Composition;
+import java.util.List;
+import javax.persistence.OneToMany;
 
-@NamePattern("№ %s|number")
+@NamePattern("№ |")
 @Table(name = "SAWARECEA_CONTRACT")
 @Entity(name = "sawarecea$Contract")
 public class Contract extends BaseUuidEntity implements Versioned, Updatable, Creatable {
     private static final long serialVersionUID = 4159544827790556737L;
+
+    @Temporal(TemporalType.DATE)
+    @NotNull
+    @Column(name = "CONCLUSION_DATE", nullable = false)
+    protected Date conclusionDate;
+
+    @Column(name = "COMPENSATION")
+    protected Double compensation;
+
+    @Composition
+    @OneToMany(mappedBy = "contract")
+    protected List<ServiceLine> services;
 
     @Column(name = "UPDATE_TS")
     protected Date updateTs;
@@ -34,9 +51,32 @@ public class Contract extends BaseUuidEntity implements Versioned, Updatable, Cr
     @Column(name = "VERSION", nullable = false)
     protected Integer version;
 
-    @NotNull
-    @Column(name = "NUMBER_", nullable = false, unique = true)
-    protected Long number;
+
+    public void setServices(List<ServiceLine> services) {
+        this.services = services;
+    }
+
+    public List<ServiceLine> getServices() {
+        return services;
+    }
+
+
+    public void setConclusionDate(Date conclusionDate) {
+        this.conclusionDate = conclusionDate;
+    }
+
+    public Date getConclusionDate() {
+        return conclusionDate;
+    }
+
+    public void setCompensation(Double compensation) {
+        this.compensation = compensation;
+    }
+
+    public Double getCompensation() {
+        return compensation;
+    }
+
 
     @Override
     public void setUpdateTs(Date updateTs) {
@@ -88,13 +128,7 @@ public class Contract extends BaseUuidEntity implements Versioned, Updatable, Cr
         return version;
     }
 
-    public void setNumber(Long number) {
-        this.number = number;
-    }
 
-    public Long getNumber() {
-        return number;
-    }
 
 
 }
